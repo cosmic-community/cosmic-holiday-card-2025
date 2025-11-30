@@ -38,84 +38,83 @@ export default function HolidayCard() {
 
   return (
     <>
-      <div className="relative z-10 max-w-2xl w-full">
+      <div className="relative z-10 max-w-xl w-full">
         {/* Decorative ornaments */}
         <Ornaments />
         
         {/* Main card */}
-        <div className="glass-card p-8 md:p-12 text-center relative overflow-hidden">
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 cosmic-gradient opacity-50" />
+        <div className="glass-card p-10 md:p-14 text-center relative overflow-hidden">
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 elegant-gradient" />
           
           {/* Content */}
           <div className="relative z-10">
             {/* Cosmic Logo - Clickable for Easter Egg */}
             <div 
-              className={`mb-8 cursor-pointer transition-transform duration-300 ${isShaking ? 'animate-shake' : 'hover:scale-110'}`}
+              className={`mb-10 cursor-pointer transition-transform duration-300 ${isShaking ? 'animate-shake' : 'hover:scale-105'}`}
               onClick={handleLogoClick}
               title="✨"
             >
-              <CosmicLogo className="w-20 h-20 mx-auto animate-glow" />
-              {clickCount > 0 && clickCount < 7 && (
-                <div className="absolute -top-2 -right-2 bg-festive-gold text-cosmic-dark text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center animate-bounce-in">
-                  {7 - clickCount}
-                </div>
-              )}
+              <div className="relative inline-block">
+                <CosmicLogo className="w-16 h-16 mx-auto animate-glow" />
+                {clickCount > 0 && clickCount < 7 && (
+                  <div className="absolute -top-1 -right-1 bg-elegant-green text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center animate-bounce-in">
+                    {7 - clickCount}
+                  </div>
+                )}
+              </div>
             </div>
             
             {/* Holiday greeting */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-              <span className="gradient-text">Happy Holidays</span>
+            <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-3 animate-fade-in text-elegant-dark">
+              Happy Holidays
             </h1>
             
             {/* Year */}
-            <div className="text-6xl md:text-8xl font-bold text-white/20 mb-6 animate-slide-up animate-delay-200">
+            <div className="text-7xl md:text-8xl font-extralight text-gray-100 mb-8 animate-slide-up animate-delay-200 tracking-tight">
               2025
             </div>
             
             {/* Message */}
-            <p className="text-lg md:text-xl text-white/80 mb-8 animate-slide-up animate-delay-300 leading-relaxed">
-              From all of us at <span className="text-cosmic-purple font-semibold">Cosmic</span>, 
-              <br className="hidden md:block" />
+            <p className="text-base md:text-lg text-elegant-gray mb-10 animate-slide-up animate-delay-300 leading-relaxed font-light max-w-md mx-auto">
+              From all of us at <span className="text-elegant-green font-medium">Cosmic</span>, 
               we wish you a season filled with 
-              <span className="text-festive-gold"> joy</span>, 
-              <span className="text-cosmic-blue"> wonder</span>, and 
-              <span className="text-festive-green"> endless possibilities</span>.
+              <span className="text-elegant-green"> joy</span>, 
+              <span className="text-elegant-red"> warmth</span>, and 
+              <span className="text-elegant-green"> peace</span>.
             </p>
             
-            {/* Divider */}
-            <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in animate-delay-500">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-cosmic-purple/50" />
-              <span className="text-2xl">✨🎄✨</span>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-cosmic-blue/50" />
+            {/* Minimal divider */}
+            <div className="flex items-center justify-center gap-6 mb-10 animate-fade-in animate-delay-500">
+              <div className="h-px w-12 bg-elegant-green/30" />
+              <span className="text-elegant-green text-lg">✦</span>
+              <div className="h-px w-12 bg-elegant-red/30" />
             </div>
             
             {/* Closing message */}
-            <p className="text-white/60 text-sm animate-fade-in animate-delay-700">
-              Thank you for being part of our cosmic journey.
+            <p className="text-elegant-gray/70 text-sm animate-fade-in animate-delay-700 font-light">
+              Thank you for being part of our journey.
               <br />
-              Here&apos;s to an extraordinary 2025! 🚀
+              Here&apos;s to an extraordinary 2025.
             </p>
             
             {/* Signature */}
-            <div className="mt-8 pt-6 border-t border-white/10 animate-fade-in animate-delay-1000">
-              <p className="text-white/40 text-sm font-festive italic">
-                With love and stardust,
+            <div className="mt-10 pt-8 border-t border-gray-100 animate-fade-in animate-delay-1000">
+              <p className="text-elegant-gray/50 text-xs font-light tracking-wide uppercase">
+                With warmth,
               </p>
-              <p className="text-cosmic-purple font-semibold mt-1">
-                The Cosmic Team 💜
+              <p className="text-elegant-green font-medium mt-2 text-sm">
+                The Cosmic Team
               </p>
             </div>
           </div>
         </div>
         
-        {/* Bottom decorative elements */}
-        <div className="flex justify-center gap-4 mt-6 animate-fade-in animate-delay-1000">
-          <span className="text-2xl animate-float">🎁</span>
-          <span className="text-2xl animate-float animate-delay-200">❄️</span>
-          <span className="text-2xl animate-float animate-delay-300">🌟</span>
-          <span className="text-2xl animate-float animate-delay-500">🎄</span>
-          <span className="text-2xl animate-float animate-delay-700">🎅</span>
+        {/* Bottom decorative elements - minimal */}
+        <div className="flex justify-center gap-6 mt-8 animate-fade-in animate-delay-1000">
+          <span className="text-xl text-elegant-green/60 animate-float">❄</span>
+          <span className="text-xl text-elegant-red/60 animate-float animate-delay-200">✦</span>
+          <span className="text-xl text-elegant-green/60 animate-float animate-delay-500">❄</span>
         </div>
       </div>
       

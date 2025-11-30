@@ -7,11 +7,11 @@ export default function HomePage() {
   const bucketSlug = process.env.COSMIC_BUCKET_SLUG || 'cosmic-holiday'
   
   return (
-    <main className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
-      {/* Animated starry background */}
+    <main className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden bg-white">
+      {/* Clean background with subtle accents */}
       <StarryBackground />
       
-      {/* Snowfall effect */}
+      {/* Gentle snowfall effect */}
       <Snowfall />
       
       {/* Main holiday card */}
