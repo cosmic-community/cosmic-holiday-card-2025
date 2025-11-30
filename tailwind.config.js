@@ -9,16 +9,16 @@ module.exports = {
       colors: {
         elegant: {
           white: '#FFFFFF',
-          green: '#228B22',
+          green: '#1B6B1B',
           'green-light': '#90EE90',
-          red: '#B22222',
+          red: '#A01F1F',
           'red-light': '#CD5C5C',
           dark: '#11181C',
-          gray: '#6B7280',
+          gray: '#4B5563',
         },
         festive: {
-          red: '#B22222',
-          green: '#228B22',
+          red: '#A01F1F',
+          green: '#1B6B1B',
           gold: '#DAA520',
           silver: '#C0C0C0',
         }

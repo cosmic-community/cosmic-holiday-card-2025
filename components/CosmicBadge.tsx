@@ -29,7 +29,7 @@ export default function CosmicBadge({ bucketSlug }: CosmicBadgeProps) {
       href={`https://www.cosmicjs.com?utm_source=bucket_${bucketSlug}&utm_medium=referral&utm_campaign=app_badge&utm_content=built_with_cosmic`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 flex items-center gap-2 text-elegant-dark text-sm font-medium no-underline transition-all duration-200 z-50 hover:shadow-lg"
+      className="fixed bottom-5 right-5 flex items-center gap-2 text-gray-800 text-sm font-medium no-underline transition-all duration-200 z-50 hover:shadow-lg"
       style={{
         position: 'fixed',
         backgroundColor: '#FFFFFF',
@@ -54,7 +54,7 @@ export default function CosmicBadge({ bucketSlug }: CosmicBadgeProps) {
           e.stopPropagation()
           handleDismiss()
         }}
-        className="absolute -top-2 -right-2 w-5 h-5 bg-gray-100 hover:bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-xs font-bold transition-colors duration-200 z-10"
+        className="absolute -top-2 -right-2 w-5 h-5 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold transition-colors duration-200 z-10"
         aria-label="Dismiss badge"
       >
         ×
@@ -65,7 +65,7 @@ export default function CosmicBadge({ bucketSlug }: CosmicBadgeProps) {
         alt="Cosmic Logo" 
         className="w-5 h-5"
       />
-      <span className="text-elegant-gray">Built with Cosmic</span>
+      <span className="text-gray-700">Built with Cosmic</span>
     </a>
   )
 }

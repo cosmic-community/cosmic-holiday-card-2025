@@ -66,44 +66,44 @@ export default function HolidayCard() {
             </div>
             
             {/* Holiday greeting */}
-            <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-3 animate-fade-in text-elegant-dark">
+            <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-3 animate-fade-in text-gray-900">
               Happy Holidays
             </h1>
             
             {/* Year */}
-            <div className="text-7xl md:text-8xl font-extralight text-gray-100 mb-8 animate-slide-up animate-delay-200 tracking-tight">
+            <div className="text-7xl md:text-8xl font-extralight text-gray-200 mb-8 animate-slide-up animate-delay-200 tracking-tight">
               2025
             </div>
             
             {/* Message */}
-            <p className="text-base md:text-lg text-elegant-gray mb-10 animate-slide-up animate-delay-300 leading-relaxed font-light max-w-md mx-auto">
-              From all of us at <span className="text-elegant-green font-medium">Cosmic</span>, 
+            <p className="text-base md:text-lg text-gray-700 mb-10 animate-slide-up animate-delay-300 leading-relaxed font-light max-w-md mx-auto">
+              From all of us at <span className="text-elegant-green font-semibold">Cosmic</span>, 
               we wish you a season filled with 
-              <span className="text-elegant-green"> joy</span>, 
-              <span className="text-elegant-red"> warmth</span>, and 
-              <span className="text-elegant-green"> peace</span>.
+              <span className="text-elegant-green font-medium"> joy</span>, 
+              <span className="text-elegant-red font-medium"> warmth</span>, and 
+              <span className="text-elegant-green font-medium"> peace</span>.
             </p>
             
             {/* Minimal divider */}
             <div className="flex items-center justify-center gap-6 mb-10 animate-fade-in animate-delay-500">
-              <div className="h-px w-12 bg-elegant-green/30" />
+              <div className="h-px w-12 bg-elegant-green/40" />
               <span className="text-elegant-green text-lg">✦</span>
-              <div className="h-px w-12 bg-elegant-red/30" />
+              <div className="h-px w-12 bg-elegant-red/40" />
             </div>
             
             {/* Closing message */}
-            <p className="text-elegant-gray/70 text-sm animate-fade-in animate-delay-700 font-light">
+            <p className="text-gray-600 text-sm animate-fade-in animate-delay-700 font-light">
               Thank you for being part of our journey.
               <br />
               Here&apos;s to an extraordinary 2025.
             </p>
             
             {/* Signature */}
-            <div className="mt-10 pt-8 border-t border-gray-100 animate-fade-in animate-delay-1000">
-              <p className="text-elegant-gray/50 text-xs font-light tracking-wide uppercase">
+            <div className="mt-10 pt-8 border-t border-gray-200 animate-fade-in animate-delay-1000">
+              <p className="text-gray-500 text-xs font-light tracking-wide uppercase">
                 With warmth,
               </p>
-              <p className="text-elegant-green font-medium mt-2 text-sm">
+              <p className="text-elegant-green font-semibold mt-2 text-sm">
                 The Cosmic Team
               </p>
             </div>
@@ -112,9 +112,9 @@ export default function HolidayCard() {
         
         {/* Bottom decorative elements - minimal */}
         <div className="flex justify-center gap-6 mt-8 animate-fade-in animate-delay-1000">
-          <span className="text-xl text-elegant-green/60 animate-float">❄</span>
-          <span className="text-xl text-elegant-red/60 animate-float animate-delay-200">✦</span>
-          <span className="text-xl text-elegant-green/60 animate-float animate-delay-500">❄</span>
+          <span className="text-xl text-elegant-green/70 animate-float">❄</span>
+          <span className="text-xl text-elegant-red/70 animate-float animate-delay-200">✦</span>
+          <span className="text-xl text-elegant-green/70 animate-float animate-delay-500">❄</span>
         </div>
       </div>
       
