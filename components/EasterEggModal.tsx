@@ -68,7 +68,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/60 hover:text-white transition-colors"
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors"
         >
           ✕
         </button>
@@ -80,7 +80,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           You Found It!
         </h2>
         
-        <p className="text-white/80 mb-6 leading-relaxed">
+        <p className="text-gray-700 mb-6 leading-relaxed">
           Congratulations, cosmic explorer! 🚀
           <br /><br />
           You&apos;ve discovered the secret Easter egg hidden in our holiday card. 
@@ -88,23 +88,23 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         </p>
         
         {/* Secret message */}
-        <div className="bg-white/5 rounded-xl p-6 mb-6 border border-white/10">
-          <p className="text-cosmic-purple font-semibold mb-2">🎁 Secret Holiday Code:</p>
+        <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
+          <p className="text-elegant-green font-semibold mb-2">🎁 Secret Holiday Code:</p>
           <code className="text-2xl font-mono text-festive-gold tracking-wider">
             COSMIC2025
           </code>
-          <p className="text-white/50 text-sm mt-3">
+          <p className="text-gray-500 text-sm mt-3">
             (Use this for something special... maybe?) 😉
           </p>
         </div>
         
         {/* Fun fact */}
-        <div className="text-sm text-white/60 italic">
+        <div className="text-sm text-gray-600 italic">
           <p>Fun fact: The number 7 represents completeness and cosmic perfection in many cultures! 🌟</p>
         </div>
         
         {/* Close prompt */}
-        <p className="mt-6 text-white/40 text-sm">
+        <p className="mt-6 text-gray-400 text-sm">
           Click anywhere to close
         </p>
       </div>
