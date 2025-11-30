@@ -66,17 +66,17 @@ export default function HolidayCard() {
             </div>
             
             {/* Holiday greeting */}
-            <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-3 animate-fade-in text-gray-900">
+            <h1 className="text-3xl md:text-5xl font-light tracking-tight mb-3 animate-fade-in text-gray-800">
               Happy Holidays
             </h1>
             
-            {/* Year */}
-            <div className="text-7xl md:text-8xl font-extralight text-gray-200 mb-8 animate-slide-up animate-delay-200 tracking-tight">
+            {/* Year - Changed from gray-200 to gray-300 for better visibility */}
+            <div className="text-7xl md:text-8xl font-extralight text-gray-300 mb-8 animate-slide-up animate-delay-200 tracking-tight">
               2025
             </div>
             
             {/* Message */}
-            <p className="text-base md:text-lg text-gray-700 mb-10 animate-slide-up animate-delay-300 leading-relaxed font-light max-w-md mx-auto">
+            <p className="text-base md:text-lg text-gray-600 mb-10 animate-slide-up animate-delay-300 leading-relaxed font-light max-w-md mx-auto">
               From all of us at <span className="text-elegant-green font-semibold">Cosmic</span>, 
               we wish you a season filled with 
               <span className="text-elegant-green font-medium"> joy</span>, 
@@ -86,13 +86,13 @@ export default function HolidayCard() {
             
             {/* Minimal divider */}
             <div className="flex items-center justify-center gap-6 mb-10 animate-fade-in animate-delay-500">
-              <div className="h-px w-12 bg-elegant-green/40" />
+              <div className="h-px w-12 bg-elegant-green/50" />
               <span className="text-elegant-green text-lg">✦</span>
-              <div className="h-px w-12 bg-elegant-red/40" />
+              <div className="h-px w-12 bg-elegant-red/50" />
             </div>
             
             {/* Closing message */}
-            <p className="text-gray-600 text-sm animate-fade-in animate-delay-700 font-light">
+            <p className="text-gray-500 text-sm animate-fade-in animate-delay-700 font-light">
               Thank you for being part of our journey.
               <br />
               Here&apos;s to an extraordinary 2025.
@@ -100,7 +100,7 @@ export default function HolidayCard() {
             
             {/* Signature */}
             <div className="mt-10 pt-8 border-t border-gray-200 animate-fade-in animate-delay-1000">
-              <p className="text-gray-500 text-xs font-light tracking-wide uppercase">
+              <p className="text-gray-400 text-xs font-light tracking-wide uppercase">
                 With warmth,
               </p>
               <p className="text-elegant-green font-semibold mt-2 text-sm">
