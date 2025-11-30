@@ -7,7 +7,7 @@ export default function HomePage() {
   const bucketSlug = process.env.COSMIC_BUCKET_SLUG || 'cosmic-holiday'
   
   return (
-    <main className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden bg-white">
+    <main className="relative min-h-screen flex items-center justify-center p-4 md:p-8 overflow-hidden bg-neutral-200">
       {/* Clean background with subtle accents */}
       <StarryBackground />
       
