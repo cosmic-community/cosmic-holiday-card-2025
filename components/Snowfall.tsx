@@ -12,20 +12,20 @@ interface Snowflake {
   symbol: string
 }
 
-const snowSymbols = ['❄', '❅', '❆', '✻', '✼', '❉', '✿', '⁂']
+const snowSymbols = ['✦', '✨', '⭐', '💫', '✵', '❋']
 
 export default function Snowfall() {
   const [snowflakes, setSnowflakes] = useState<Snowflake[]>([])
 
   useEffect(() => {
-    const flakes: Snowflake[] = Array.from({ length: 50 }, (_, i) => ({
+    const flakes: Snowflake[] = Array.from({ length: 30 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      size: Math.random() * 16 + 8,
-      duration: Math.random() * 10 + 10,
+      size: Math.random() * 12 + 6,
+      duration: Math.random() * 12 + 12,
       delay: Math.random() * 10,
-      opacity: Math.random() * 0.7 + 0.3,
-      symbol: snowSymbols[Math.floor(Math.random() * snowSymbols.length)] || '❄',
+      opacity: Math.random() * 0.4 + 0.2,
+      symbol: snowSymbols[Math.floor(Math.random() * snowSymbols.length)] || '✦',
     }))
     setSnowflakes(flakes)
   }, [])
@@ -35,7 +35,7 @@ export default function Snowfall() {
       {snowflakes.map((flake) => (
         <span
           key={flake.id}
-          className="snow-particle animate-snow-fall"
+          className="snow-particle-cosmic animate-snow-fall"
           style={{
             left: `${flake.left}%`,
             fontSize: `${flake.size}px`,

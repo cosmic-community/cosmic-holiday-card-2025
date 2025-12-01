@@ -7,30 +7,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        elegant: {
-          white: '#FFFFFF',
-          green: '#1B6B1B',
-          'green-light': '#90EE90',
-          red: '#A01F1F',
-          'red-light': '#CD5C5C',
-          dark: '#11181C',
-          gray: '#4B5563',
-        },
-        festive: {
-          red: '#A01F1F',
-          green: '#1B6B1B',
-          gold: '#DAA520',
-          silver: '#C0C0C0',
-        }
+        'cosmic-navy': '#111827',
+        'cosmic-navy-light': '#1F2937',
+        'cosmic-blue': '#3B82F6',
+        'cosmic-blue-dark': '#2563EB',
+        'cosmic-cyan': '#8BE9FD',
+        'cosmic-purple': '#A78BFA',
+        'cosmic-orange': '#F59E0B',
+        'cosmic-gray': '#9CA3AF',
+        'cosmic-gray-light': '#D1D5DB',
+        'cosmic-gray-dark': '#374151',
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        festive: ['Georgia', 'serif'],
       },
       animation: {
         'snow-fall': 'snowFall linear infinite',
         'twinkle': 'twinkle 3s ease-in-out infinite',
         'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'floatSlow 10s ease-in-out infinite',
         'glow': 'glow 3s ease-in-out infinite alternate',
         'shake': 'shake 0.5s ease-in-out',
         'confetti': 'confetti 3s ease-out forwards',
@@ -42,19 +37,23 @@ module.exports = {
       keyframes: {
         snowFall: {
           '0%': { transform: 'translateY(-10vh) rotate(0deg)', opacity: '0.8' },
-          '100%': { transform: 'translateY(110vh) rotate(360deg)', opacity: '0.2' },
+          '100%': { transform: 'translateY(110vh) rotate(360deg)', opacity: '0' },
         },
         twinkle: {
-          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
-          '50%': { opacity: '1', transform: 'scale(1.1)' },
+          '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.2)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-15px)' },
         },
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-25px) rotate(180deg)' },
+        },
         glow: {
-          '0%': { filter: 'drop-shadow(0 0 3px rgba(34, 139, 34, 0.3))' },
-          '100%': { filter: 'drop-shadow(0 0 12px rgba(34, 139, 34, 0.6))' },
+          '0%': { filter: 'drop-shadow(0 0 5px rgba(139, 233, 253, 0.5))' },
+          '100%': { filter: 'drop-shadow(0 0 20px rgba(139, 233, 253, 0.9))' },
         },
         shake: {
           '0%, 100%': { transform: 'rotate(0deg)' },
@@ -80,7 +79,7 @@ module.exports = {
         },
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
+          '50%': { opacity: '0.7' },
         },
       },
     },
