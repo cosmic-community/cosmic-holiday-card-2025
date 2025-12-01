@@ -4,27 +4,45 @@ import './globals.css'
 export const metadata: Metadata = {
   title: '✦ Happy Holidays from Cosmic | 2025',
   description: 'Wishing you a peaceful holiday season and a wonderful 2025. From your friends at Cosmic.',
-  keywords: ['Cosmic', 'Holiday Card', 'Christmas', '2025', 'New Year'],
+  keywords: ['Cosmic', 'Holiday Card', 'Christmas', '2025', 'New Year', 'Happy Holidays', 'Season Greetings'],
   authors: [{ name: 'Cosmic' }],
+  creator: 'Cosmic',
+  publisher: 'Cosmic',
   openGraph: {
     title: '✦ Happy Holidays from Cosmic | 2025',
     description: 'Wishing you a peaceful holiday season and a wonderful 2025. From your friends at Cosmic.',
+    url: 'https://cosmic-holiday-card-2025.vercel.app',
+    siteName: 'Cosmic Holiday Card',
     images: [
       {
-        url: 'https://imgix.cosmicjs.com/6dafe000-a20f-11ee-b417-db331415685f-snow.jpg?w=1200&h=630&fit=crop&auto=format,compress',
+        url: 'https://imgix.cosmicjs.com/74943590-cee8-11f0-ab33-09cb31e91e16-happy-holidays-2025.png?w=1200&h=630&fit=crop&auto=format,compress',
         width: 1200,
         height: 630,
-        alt: 'Cosmic Holiday Card 2025',
+        alt: 'Happy Holidays 2025 from Cosmic - Festive holiday greeting card',
       },
     ],
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: '✦ Happy Holidays from Cosmic | 2025',
     description: 'Wishing you a peaceful holiday season and a wonderful 2025!',
-    images: ['https://imgix.cosmicjs.com/6dafe000-a20f-11ee-b417-db331415685f-snow.jpg?w=1200&h=630&fit=crop&auto=format,compress'],
+    images: ['https://imgix.cosmicjs.com/74943590-cee8-11f0-ab33-09cb31e91e16-happy-holidays-2025.png?w=1200&h=630&fit=crop&auto=format,compress'],
+    creator: '@cosmicjs',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  metadataBase: new URL('https://cosmic-holiday-card-2025.vercel.app'),
 }
 
 export default function RootLayout({
