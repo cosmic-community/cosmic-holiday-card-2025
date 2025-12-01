@@ -62,37 +62,37 @@ export default function HolidayCard() {
               </div>
             </div>
             
-            {/* Large title - Apple style */}
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6 animate-fade-in text-white leading-tight">
+            {/* Large title - Apple style - Changed: Removed animation */}
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6 text-white leading-tight">
               Happy Holidays
             </h1>
             
-            {/* Subtitle with year */}
-            <p className="text-6xl md:text-7xl text-white/20 mb-8 animate-slide-up animate-delay-200 leading-relaxed font-bold">
+            {/* Subtitle with year - Changed: Removed animation */}
+            <p className="text-6xl md:text-7xl text-white/20 mb-8 leading-relaxed font-bold">
               2025
             </p>
             
-            {/* Minimal divider */}
-            <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in animate-delay-500">
+            {/* Minimal divider - Changed: Removed animation */}
+            <div className="flex items-center justify-center gap-4 mb-8">
               <div className="h-px w-12 bg-cosmic-gray-dark" />
               <span className="text-cosmic-blue text-sm">✦</span>
               <div className="h-px w-12 bg-cosmic-gray-dark" />
             </div>
             
-            {/* Message - Changed: Match old version exactly */}
-            <p className="text-base text-cosmic-gray-light mb-4 animate-fade-in animate-delay-700 leading-relaxed font-normal max-w-lg mx-auto">
+            {/* Message - Changed: Removed animation */}
+            <p className="text-base text-cosmic-gray-light mb-4 leading-relaxed font-normal max-w-lg mx-auto">
               From all of us at <span className="text-white font-semibold">Cosmic</span>, we wish you a season filled with joy, <span className="text-cosmic-orange font-medium">warmth</span>, and peace.
             </p>
             
-            {/* Thank you message */}
-            <p className="text-base text-cosmic-gray-light mb-8 animate-fade-in animate-delay-700 leading-relaxed font-normal max-w-lg mx-auto">
+            {/* Thank you message - Changed: Removed animation */}
+            <p className="text-base text-cosmic-gray-light mb-8 leading-relaxed font-normal max-w-lg mx-auto">
               Thank you for being part of our journey.
               <br />
               Here&apos;s to an extraordinary 2025.
             </p>
             
-            {/* Signature - Changed: Match old version */}
-            <div className="mt-10 pt-8 border-t border-cosmic-gray-dark/30 animate-fade-in animate-delay-1000">
+            {/* Signature - Changed: Removed animation */}
+            <div className="mt-10 pt-8 border-t border-cosmic-gray-dark/30">
               <p className="text-cosmic-gray text-xs font-medium tracking-widest uppercase mb-2">
                 With Warmth,
               </p>
@@ -103,8 +103,8 @@ export default function HolidayCard() {
           </div>
         </div>
         
-        {/* Bottom decorative elements - minimal stars */}
-        <div className="flex justify-center gap-6 mt-8 animate-fade-in animate-delay-1000">
+        {/* Bottom decorative elements - minimal stars - Changed: Removed animation */}
+        <div className="flex justify-center gap-6 mt-8">
           <span className="text-xl text-cosmic-cyan/40 animate-float">✦</span>
           <span className="text-xl text-cosmic-purple/40 animate-float animate-delay-200">✨</span>
           <span className="text-xl text-cosmic-orange/40 animate-float animate-delay-500">✦</span>
