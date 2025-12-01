@@ -1,3 +1,6 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import HolidayCard from '@/components/HolidayCard'
 import Snowfall from '@/components/Snowfall'
 import FloatingIcons from '@/components/FloatingIcons'
@@ -5,6 +8,15 @@ import CosmicBadge from '@/components/CosmicBadge'
 
 export default function HomePage() {
   const bucketSlug = process.env.COSMIC_BUCKET_SLUG || 'cosmic-holiday'
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
   
   return (
     <main className="relative min-h-screen flex flex-col items-center justify-center p-4 md:p-8 overflow-hidden bg-cosmic-navy">
