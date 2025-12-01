@@ -58,9 +58,9 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         />
       ))}
       
-      {/* Modal content */}
+      {/* Modal content - Changed: White background for readability */}
       <div 
-        className={`relative glass-card p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 ${
+        className={`relative bg-white rounded-3xl p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 shadow-2xl ${
           showContent ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -76,7 +76,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         {/* Easter egg content */}
         <div className="text-6xl mb-6 animate-bounce-in">🥚✨</div>
         
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
           You Found It!
         </h2>
         
@@ -89,8 +89,8 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         
         {/* Secret message */}
         <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
-          <p className="text-elegant-green font-semibold mb-2">🎁 Secret Holiday Code:</p>
-          <code className="text-2xl font-mono text-festive-gold tracking-wider">
+          <p className="text-green-700 font-semibold mb-2">🎁 Secret Holiday Code:</p>
+          <code className="text-2xl font-mono text-yellow-600 tracking-wider">
             COSMIC2025
           </code>
           <p className="text-gray-500 text-sm mt-3">
