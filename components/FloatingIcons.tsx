@@ -36,7 +36,7 @@ export default function FloatingIcons() {
       size: Math.random() * 40 + 30,
       delay: Math.random() * 4,
       duration: Math.random() * 8 + 8,
-      color: colors[Math.floor(Math.random() * colors.length)] || colors[0],
+      color: colors[Math.floor(Math.random() * colors.length)] ?? colors[0], // Changed: Use nullish coalescing to ensure color is always defined
     }))
     
     setIcons(generatedIcons)
