@@ -38,80 +38,84 @@ export default function HolidayCard() {
 
   return (
     <>
-      <div className="relative z-10 max-w-lg w-full">
+      <div className="relative z-10 max-w-2xl w-full">
         {/* Decorative ornaments */}
         <Ornaments />
         
-        {/* Main card */}
-        <div className="glass-card p-10 md:p-14 text-center relative overflow-hidden">
+        {/* Main card - Apple-inspired glass effect */}
+        <div className="apple-glass-card p-12 md:p-16 text-center relative overflow-hidden">
           {/* Content */}
           <div className="relative z-10">
             {/* Cosmic Logo - Clickable for Easter Egg */}
             <div 
-              className={`mb-8 cursor-pointer transition-transform duration-300 ${isShaking ? 'animate-shake' : 'hover:scale-105'}`}
+              className={`mb-10 cursor-pointer transition-transform duration-300 ${isShaking ? 'animate-shake' : 'hover:scale-105'}`}
               onClick={handleLogoClick}
               title="✨"
             >
               <div className="relative inline-block">
-                <CosmicLogo className="w-14 h-14 mx-auto" />
+                <CosmicLogo className="w-16 h-16 mx-auto opacity-90" />
                 {clickCount > 0 && clickCount < 7 && (
-                  <div className="absolute -top-1 -right-1 bg-elegant-green text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center animate-bounce-in">
+                  <div className="absolute -top-1 -right-1 bg-cosmic-blue text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center animate-bounce-in">
                     {7 - clickCount}
                   </div>
                 )}
               </div>
             </div>
             
-            {/* Holiday greeting */}
-            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2 animate-fade-in text-neutral-900">
+            {/* Large title - Apple style */}
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6 text-white leading-tight">
               Happy Holidays
             </h1>
             
-            {/* Year */}
-            <div className="text-6xl md:text-7xl font-extralight text-neutral-200 mb-8 animate-slide-up animate-delay-200 tracking-tight select-none">
-              2025
+            {/* Festive 2025 with SVG-style gradient - Changed: Added festive gradient styling */}
+            <div className="mb-8">
+              <p className="text-7xl md:text-8xl font-bold leading-relaxed festive-gradient-text">
+                2025
+              </p>
+              {/* Decorative festive elements around 2025 */}
+              <div className="flex justify-center gap-4 mt-2">
+                <span className="text-2xl text-festive-joy animate-twinkle">✨</span>
+                <span className="text-2xl text-festive-warmth animate-twinkle animate-delay-200">🎉</span>
+                <span className="text-2xl text-festive-peace animate-twinkle animate-delay-500">⭐</span>
+              </div>
             </div>
-            
-            {/* Message */}
-            <p className="text-base text-neutral-600 mb-8 animate-slide-up animate-delay-300 leading-relaxed font-normal max-w-sm mx-auto">
-              From all of us at <span className="text-elegant-green font-semibold">Cosmic</span>, 
-              we wish you a season filled with 
-              <span className="font-medium"> joy</span>, 
-              <span className="text-elegant-red font-medium"> warmth</span>, and 
-              <span className="font-medium"> peace</span>.
-            </p>
             
             {/* Minimal divider */}
-            <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in animate-delay-500">
-              <div className="h-px w-10 bg-neutral-200" />
-              <span className="text-elegant-green text-sm">✦</span>
-              <div className="h-px w-10 bg-neutral-200" />
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-festive-joy to-transparent" />
+              <span className="text-festive-gold text-sm">✦</span>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-festive-warmth to-transparent" />
             </div>
             
-            {/* Closing message */}
-            <p className="text-neutral-500 text-sm animate-fade-in animate-delay-700 font-normal leading-relaxed">
+            {/* Message with festive color highlights - Changed: Added festive color keywords */}
+            <p className="text-base text-cosmic-gray-light mb-4 leading-relaxed font-normal max-w-lg mx-auto">
+              From all of us at <span className="text-white font-semibold">Cosmic</span>, we wish you a season filled with <span className="text-festive-joy font-semibold">joy</span>, <span className="text-festive-warmth font-semibold">warmth</span>, and <span className="text-festive-peace font-semibold">peace</span>.
+            </p>
+            
+            {/* Thank you message */}
+            <p className="text-base text-cosmic-gray-light mb-8 leading-relaxed font-normal max-w-lg mx-auto">
               Thank you for being part of our journey.
               <br />
               Here&apos;s to an extraordinary 2025.
             </p>
             
             {/* Signature */}
-            <div className="mt-8 pt-6 border-t border-neutral-100 animate-fade-in animate-delay-1000">
-              <p className="text-neutral-400 text-xs font-medium tracking-widest uppercase">
-                With warmth,
+            <div className="mt-10 pt-8 border-t border-cosmic-gray-dark/30">
+              <p className="text-cosmic-gray text-xs font-medium tracking-widest uppercase mb-2">
+                With Warmth,
               </p>
-              <p className="text-neutral-900 font-semibold mt-1.5 text-sm">
+              <p className="text-white font-semibold text-sm">
                 The Cosmic Team
               </p>
             </div>
           </div>
         </div>
         
-        {/* Bottom decorative elements - minimal */}
-        <div className="flex justify-center gap-6 mt-6 animate-fade-in animate-delay-1000">
-          <span className="text-lg text-neutral-300 animate-float">❄</span>
-          <span className="text-lg text-neutral-300 animate-float animate-delay-200">✦</span>
-          <span className="text-lg text-neutral-300 animate-float animate-delay-500">❄</span>
+        {/* Bottom decorative elements - festive colors - Changed: Updated with festive colors */}
+        <div className="flex justify-center gap-6 mt-8">
+          <span className="text-xl text-festive-joy/60 animate-float">✦</span>
+          <span className="text-xl text-festive-warmth/60 animate-float animate-delay-200">✨</span>
+          <span className="text-xl text-festive-peace/60 animate-float animate-delay-500">✦</span>
         </div>
       </div>
       

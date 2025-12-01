@@ -37,10 +37,9 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
   return (
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      onClick={onClose}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
       
       {/* Confetti */}
       {confetti.map((piece) => (
@@ -58,9 +57,9 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         />
       ))}
       
-      {/* Modal content */}
+      {/* Modal content - Changed: White background for readability */}
       <div 
-        className={`relative glass-card p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 ${
+        className={`relative bg-white rounded-3xl p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 shadow-2xl ${
           showContent ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -76,37 +75,42 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         {/* Easter egg content */}
         <div className="text-6xl mb-6 animate-bounce-in">🥚✨</div>
         
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
           You Found It!
         </h2>
         
         <p className="text-gray-700 mb-6 leading-relaxed">
           Congratulations, cosmic explorer! 🚀
           <br /><br />
-          You&apos;ve discovered the secret Easter egg hidden in our holiday card. 
-          Your curiosity and persistence are exactly the qualities we love in our community!
+          You&apos;ve discovered the secret Easter egg hidden in our holiday card.
         </p>
         
-        {/* Secret message */}
+        {/* Secret message - Changed: Updated with holiday discount code and expiration */}
         <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
-          <p className="text-elegant-green font-semibold mb-2">🎁 Secret Holiday Code:</p>
-          <code className="text-2xl font-mono text-festive-gold tracking-wider">
+          <p className="text-green-700 font-semibold mb-2">🎁 Holiday Special:</p>
+          <code className="text-2xl font-mono text-yellow-600 tracking-wider">
             COSMIC2025
           </code>
-          <p className="text-gray-500 text-sm mt-3">
-            (Use this for something special... maybe?) 😉
+          <p className="text-gray-600 text-sm mt-3 font-medium">
+            Use this holiday code for $25 off
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Good until January 1, 2026
           </p>
         </div>
-        
-        {/* Fun fact */}
-        <div className="text-sm text-gray-600 italic">
-          <p>Fun fact: The number 7 represents completeness and cosmic perfection in many cultures! 🌟</p>
-        </div>
-        
-        {/* Close prompt */}
-        <p className="mt-6 text-gray-400 text-sm">
-          Click anywhere to close
-        </p>
+
+        {/* Changed: Added call-to-action button to apply code */}
+        <a
+          href="https://app.cosmicjs.com/account/billing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+        >
+          Apply Code in Dashboard
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   )
