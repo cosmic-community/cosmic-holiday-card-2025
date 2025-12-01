@@ -1,7 +1,5 @@
 # 🎄 Cosmic Holiday Card 2025
 
-![Cosmic Holiday Card](https://imgix.cosmicjs.com/6dafe000-a20f-11ee-b417-db331415685f-snow.jpg?w=1200&h=300&fit=crop&auto=format,compress)
-
 A magical, interactive holiday greeting card from Cosmic to celebrate the 2025 season! Features beautiful snowfall animations, elegant typography, and a hidden easter egg for curious visitors.
 
 ## ✨ Features
