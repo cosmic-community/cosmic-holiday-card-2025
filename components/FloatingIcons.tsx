@@ -17,18 +17,21 @@ export default function FloatingIcons() {
   const [icons, setIcons] = useState<FloatingIcon[]>([])
 
   useEffect(() => {
-    // Cosmic-themed icons similar to Apple's product icons
-    const iconSet = ['🚀', '🌟', '✨', '⭐', '💫', '🌙', '🪐', '☄️']
+    // Cosmic-themed icons with festive elements
+    const iconSet = ['🚀', '🌟', '✨', '⭐', '💫', '🌙', '🪐', '☄️', '🎉', '🎊', '🎈']
+    // Updated colors with festive theme - Changed: Added festive colors
     const colors = [
-      'rgba(139, 233, 253, 0.4)', // cyan
-      'rgba(245, 158, 11, 0.4)',  // orange
-      'rgba(167, 139, 250, 0.4)', // purple
-      'rgba(34, 197, 94, 0.4)',   // green
-      'rgba(251, 191, 36, 0.4)',  // yellow
-      'rgba(236, 72, 153, 0.4)',  // pink
+      'rgba(255, 107, 157, 0.5)', // festive-joy (pink)
+      'rgba(255, 179, 71, 0.5)',  // festive-warmth (orange)
+      'rgba(135, 206, 235, 0.5)', // festive-peace (blue)
+      'rgba(255, 215, 0, 0.5)',   // festive-gold
+      'rgba(255, 105, 180, 0.5)', // festive-rose
+      'rgba(152, 255, 152, 0.5)', // festive-mint
+      'rgba(139, 233, 253, 0.4)', // cosmic-cyan
+      'rgba(167, 139, 250, 0.4)', // cosmic-purple
     ]
 
-    const generatedIcons: FloatingIcon[] = Array.from({ length: 12 }, (_, i) => ({
+    const generatedIcons: FloatingIcon[] = Array.from({ length: 15 }, (_, i) => ({
       id: i,
       icon: iconSet[Math.floor(Math.random() * iconSet.length)] || '✨',
       left: Math.random() * 100,
@@ -36,7 +39,7 @@ export default function FloatingIcons() {
       size: Math.random() * 40 + 30,
       delay: Math.random() * 4,
       duration: Math.random() * 8 + 8,
-      color: colors[Math.floor(Math.random() * colors.length)] || 'rgba(139, 233, 253, 0.4)', // Changed: Use logical OR to ensure color is always defined with a default fallback
+      color: colors[Math.floor(Math.random() * colors.length)] || 'rgba(255, 107, 157, 0.5)',
     }))
     
     setIcons(generatedIcons)

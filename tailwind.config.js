@@ -17,6 +17,13 @@ module.exports = {
         'cosmic-gray': '#9CA3AF',
         'cosmic-gray-light': '#D1D5DB',
         'cosmic-gray-dark': '#374151',
+        // Festive colors for joy, warmth, and peace
+        'festive-joy': '#FF6B9D',      // Vibrant pink for joy
+        'festive-warmth': '#FFB347',   // Warm orange for warmth
+        'festive-peace': '#87CEEB',    // Soft sky blue for peace
+        'festive-gold': '#FFD700',     // Gold for celebration
+        'festive-rose': '#FF69B4',     // Hot pink for excitement
+        'festive-mint': '#98FF98',     // Mint green for freshness
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
@@ -33,6 +40,7 @@ module.exports = {
         'fade-in': 'fadeIn 1s ease-out',
         'slide-up': 'slideUp 0.8s ease-out',
         'pulse-subtle': 'pulseSubtle 2s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 4s ease-in-out infinite',
       },
       keyframes: {
         snowFall: {
@@ -80,6 +88,10 @@ module.exports = {
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.7' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
     },

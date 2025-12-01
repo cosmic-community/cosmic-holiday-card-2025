@@ -62,36 +62,44 @@ export default function HolidayCard() {
               </div>
             </div>
             
-            {/* Large title - Apple style - Changed: Removed animation */}
+            {/* Large title - Apple style */}
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6 text-white leading-tight">
               Happy Holidays
             </h1>
             
-            {/* Subtitle with year - Changed: Removed animation */}
-            <p className="text-6xl md:text-7xl text-white/20 mb-8 leading-relaxed font-bold">
-              2025
-            </p>
-            
-            {/* Minimal divider - Changed: Removed animation */}
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px w-12 bg-cosmic-gray-dark" />
-              <span className="text-cosmic-blue text-sm">✦</span>
-              <div className="h-px w-12 bg-cosmic-gray-dark" />
+            {/* Festive 2025 with SVG-style gradient - Changed: Added festive gradient styling */}
+            <div className="mb-8">
+              <p className="text-7xl md:text-8xl font-bold leading-relaxed festive-gradient-text">
+                2025
+              </p>
+              {/* Decorative festive elements around 2025 */}
+              <div className="flex justify-center gap-4 mt-2">
+                <span className="text-2xl text-festive-joy animate-twinkle">✨</span>
+                <span className="text-2xl text-festive-warmth animate-twinkle animate-delay-200">🎉</span>
+                <span className="text-2xl text-festive-peace animate-twinkle animate-delay-500">⭐</span>
+              </div>
             </div>
             
-            {/* Message - Changed: Removed animation */}
+            {/* Minimal divider */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-festive-joy to-transparent" />
+              <span className="text-festive-gold text-sm">✦</span>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-festive-warmth to-transparent" />
+            </div>
+            
+            {/* Message with festive color highlights - Changed: Added festive color keywords */}
             <p className="text-base text-cosmic-gray-light mb-4 leading-relaxed font-normal max-w-lg mx-auto">
-              From all of us at <span className="text-white font-semibold">Cosmic</span>, we wish you a season filled with joy, <span className="text-cosmic-orange font-medium">warmth</span>, and peace.
+              From all of us at <span className="text-white font-semibold">Cosmic</span>, we wish you a season filled with <span className="text-festive-joy font-semibold">joy</span>, <span className="text-festive-warmth font-semibold">warmth</span>, and <span className="text-festive-peace font-semibold">peace</span>.
             </p>
             
-            {/* Thank you message - Changed: Removed animation */}
+            {/* Thank you message */}
             <p className="text-base text-cosmic-gray-light mb-8 leading-relaxed font-normal max-w-lg mx-auto">
               Thank you for being part of our journey.
               <br />
               Here&apos;s to an extraordinary 2025.
             </p>
             
-            {/* Signature - Changed: Removed animation */}
+            {/* Signature */}
             <div className="mt-10 pt-8 border-t border-cosmic-gray-dark/30">
               <p className="text-cosmic-gray text-xs font-medium tracking-widest uppercase mb-2">
                 With Warmth,
@@ -103,11 +111,11 @@ export default function HolidayCard() {
           </div>
         </div>
         
-        {/* Bottom decorative elements - minimal stars - Changed: Removed animation */}
+        {/* Bottom decorative elements - festive colors - Changed: Updated with festive colors */}
         <div className="flex justify-center gap-6 mt-8">
-          <span className="text-xl text-cosmic-cyan/40 animate-float">✦</span>
-          <span className="text-xl text-cosmic-purple/40 animate-float animate-delay-200">✨</span>
-          <span className="text-xl text-cosmic-orange/40 animate-float animate-delay-500">✦</span>
+          <span className="text-xl text-festive-joy/60 animate-float">✦</span>
+          <span className="text-xl text-festive-warmth/60 animate-float animate-delay-200">✨</span>
+          <span className="text-xl text-festive-peace/60 animate-float animate-delay-500">✦</span>
         </div>
       </div>
       

@@ -16,6 +16,12 @@
     --cosmic-gray: 156 163 175;
     --cosmic-gray-light: 209 213 219;
     --cosmic-gray-dark: 55 65 81;
+    --festive-joy: 255 107 157;
+    --festive-warmth: 255 179 71;
+    --festive-peace: 135 206 235;
+    --festive-gold: 255 215 0;
+    --festive-rose: 255 105 180;
+    --festive-mint: 152 255 152;
   }
   
   body {
@@ -56,6 +62,22 @@
   .star {
     @apply absolute;
     filter: drop-shadow(0 0 12px rgba(139, 233, 253, 0.8));
+  }
+
+  .festive-gradient-text {
+    background: linear-gradient(
+      135deg,
+      #FF6B9D 0%,    /* joy - vibrant pink */
+      #FFB347 25%,   /* warmth - warm orange */
+      #FFD700 50%,   /* celebration - gold */
+      #87CEEB 75%,   /* peace - soft blue */
+      #98FF98 100%   /* freshness - mint */
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease-in-out infinite;
   }
 }
 
