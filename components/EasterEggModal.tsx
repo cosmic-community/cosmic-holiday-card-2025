@@ -98,6 +98,19 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
             Good until January 1, 2026
           </p>
         </div>
+
+        {/* Changed: Added call-to-action button to apply code */}
+        <a
+          href="https://app.cosmicjs.com/account/billing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+        >
+          Apply Code in Dashboard
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   )
