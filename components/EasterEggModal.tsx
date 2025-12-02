@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 interface EasterEggModalProps {
   onClose: () => void
@@ -19,8 +20,11 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
   const [showContent, setShowContent] = useState(false)
   const [copied, setCopied] = useState(false)
   const [showTooltip, setShowTooltip] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+    
     // Generate confetti
     const colors = ['#6B5CE7', '#29ABE2', '#F59E0B', '#DC2626', '#16A34A', '#EC4899']
     const pieces: Confetti[] = Array.from({ length: 50 }, (_, i) => ({
@@ -61,11 +65,16 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
     }
   }
 
-  return (
+  // Don't render until mounted (client-side only)
+  if (!mounted) {
+    return null
+  }
+
+  const modalContent = (
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
     >
-      {/* Backdrop - Changed: Added fixed positioning to ensure full-screen coverage */}
+      {/* Backdrop - Changed: Using React Portal to render directly to body */}
       <div className="fixed inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
       
       {/* Confetti */}
@@ -198,4 +207,8 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
       </div>
     </div>
   )
+
+  // Use React Portal to render modal directly to document.body
+  // This bypasses any parent container positioning constraints
+  return createPortal(modalContent, document.body)
 }
