@@ -20,7 +20,8 @@ export const metadata: Metadata = {
     siteName: 'Cosmic Holiday Card',
     images: [
       {
-        url: 'https://imgix.cosmicjs.com/74943590-cee8-11f0-ab33-09cb31e91e16-happy-holidays-2025.png?w=1200&h=630&fit=crop&auto=format,compress',
+        // Changed: Updated to new holiday card design image
+        url: 'https://imgix.cosmicjs.com/a9db44e0-cf9d-11f0-ab33-09cb31e91e16-repository-692bf017c5646c2bd110e1cc-1764693650851.webp?w=1200&h=630&fit=crop&auto=format,compress',
         width: 1200,
         height: 630,
         // Changed: Updated alt text to reference 2026
@@ -36,7 +37,8 @@ export const metadata: Metadata = {
     title: '✦ Happy Holidays from Cosmic | 2026',
     // Changed: Updated Twitter card description to reference 2026
     description: 'Wishing you a peaceful holiday season and a wonderful 2026!',
-    images: ['https://imgix.cosmicjs.com/74943590-cee8-11f0-ab33-09cb31e91e16-happy-holidays-2025.png?w=1200&h=630&fit=crop&auto=format,compress'],
+    // Changed: Updated Twitter card image to new design
+    images: ['https://imgix.cosmicjs.com/a9db44e0-cf9d-11f0-ab33-09cb31e91e16-repository-692bf017c5646c2bd110e1cc-1764693650851.webp?w=1200&h=630&fit=crop&auto=format,compress'],
     creator: '@cosmicjs',
   },
   robots: {
