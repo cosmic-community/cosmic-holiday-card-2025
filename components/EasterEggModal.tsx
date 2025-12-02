@@ -189,9 +189,8 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           <p className="text-gray-600 text-sm mt-4 font-medium">
             Use this holiday code for $25 off
           </p>
-          {/* Changed: Updated expiration date to January 1, 2027 */}
           <p className="text-gray-500 text-xs mt-2">
-            Good until January 1, 2027
+            Good until January 1, 2026
           </p>
         </div>
 
