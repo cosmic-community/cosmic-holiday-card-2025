@@ -194,12 +194,13 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           </p>
         </div>
 
-        {/* Call-to-action button */}
+        {/* Call-to-action button - Changed: Removed hover animation and set solid cosmic blue background */}
         <a
           href="https://app.cosmicjs.com/account/billing"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cosmic-blue to-cosmic-purple text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+          className="inline-flex items-center justify-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200"
+          style={{ backgroundColor: '#29abe2' }}
         >
           Apply Code in Dashboard
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
