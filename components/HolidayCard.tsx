@@ -22,12 +22,12 @@ export default function HolidayCard() {
             Happy Holidays
           </h1>
           
-          {/* Festive 2025 with SVG-style gradient - Changed: Added festive gradient styling */}
+          {/* Festive 2026 with SVG-style gradient - Changed: Updated year to 2026 */}
           <div className="mb-8">
             <p className="text-7xl md:text-8xl font-bold leading-relaxed festive-gradient-text">
-              2025
+              2026
             </p>
-            {/* Decorative festive elements around 2025 */}
+            {/* Decorative festive elements around 2026 */}
             <div className="flex justify-center gap-4 mt-2">
               <span className="text-2xl text-festive-joy animate-twinkle">✨</span>
               <span className="text-2xl text-festive-warmth animate-twinkle animate-delay-200">🎉</span>
@@ -47,11 +47,11 @@ export default function HolidayCard() {
             From all of us at <span className="text-white font-semibold">Cosmic</span>, we wish you a season filled with <span className="text-festive-joy font-semibold">joy</span>, <span className="text-festive-warmth font-semibold">warmth</span>, and <span className="text-festive-peace font-semibold">peace</span>.
           </p>
           
-          {/* Thank you message - Changed: Simplified 2026 forward-looking message */}
+          {/* Thank you message - Changed: Updated to reference 2025 and looking forward to 2026 */}
           <p className="text-base text-cosmic-gray-light mb-8 leading-relaxed font-normal max-w-lg mx-auto">
             Thank you for being part of our journey.
             <br />
-            Here&apos;s to an extraordinary 2025. We look forward to building with you in 2026.
+            Here&apos;s to an extraordinary 2026 ahead!
           </p>
           
           {/* Signature */}

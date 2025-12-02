@@ -42,14 +42,15 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
 
   const copyPromoCode = async () => {
     try {
-      await navigator.clipboard.writeText('COSMIC2025')
+      // Changed: Updated promo code to COSMIC2026
+      await navigator.clipboard.writeText('COSMIC2026')
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch (err) {
       console.error('Failed to copy:', err)
       // Fallback: Create a temporary input to copy
       const textArea = document.createElement('textarea')
-      textArea.value = 'COSMIC2025'
+      textArea.value = 'COSMIC2026' // Changed: Updated promo code to COSMIC2026
       textArea.style.position = 'fixed'
       textArea.style.left = '-999999px'
       document.body.appendChild(textArea)
@@ -138,7 +139,8 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
                 }`}
                 aria-label="Click to copy promo code"
               >
-                <code>COSMIC2025</code>
+                {/* Changed: Updated promo code display to COSMIC2026 */}
+                <code>COSMIC2026</code>
                 {copied ? (
                   <svg 
                     className="w-5 h-5 text-green-600 animate-bounce-in" 
@@ -187,8 +189,9 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           <p className="text-gray-600 text-sm mt-4 font-medium">
             Use this holiday code for $25 off
           </p>
+          {/* Changed: Updated expiration date to January 1, 2027 */}
           <p className="text-gray-500 text-xs mt-2">
-            Good until January 1, 2026
+            Good until January 1, 2027
           </p>
         </div>
 
