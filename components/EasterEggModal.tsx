@@ -43,6 +43,21 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
       setTimeout(() => setCopied(false), 2000)
     } catch (err) {
       console.error('Failed to copy:', err)
+      // Fallback: Create a temporary input to copy
+      const textArea = document.createElement('textarea')
+      textArea.value = 'COSMIC2025'
+      textArea.style.position = 'fixed'
+      textArea.style.left = '-999999px'
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand('copy')
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      } catch (fallbackErr) {
+        console.error('Fallback copy failed:', fallbackErr)
+      }
+      document.body.removeChild(textArea)
     }
   }
 
@@ -107,7 +122,11 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
                 onClick={copyPromoCode}
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
-                className="relative text-2xl font-mono text-yellow-600 tracking-wider bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer flex items-center gap-3"
+                className={`relative text-2xl font-mono tracking-wider px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer flex items-center gap-3 ${
+                  copied 
+                    ? 'bg-green-100 text-green-700' 
+                    : 'text-yellow-600 bg-gray-100 hover:bg-gray-200'
+                }`}
                 aria-label="Click to copy promo code"
               >
                 <code>COSMIC2025</code>
@@ -149,9 +168,9 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
                 </div>
               )}
               {copied && (
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-3 rounded whitespace-nowrap">
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-xs py-1 px-3 rounded whitespace-nowrap">
                   Copied!
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-green-600"></div>
                 </div>
               )}
             </div>
