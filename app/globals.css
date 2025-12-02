@@ -24,6 +24,11 @@
     --festive-mint: 152 255 152;
   }
   
+  /* Changed: Added dark background to html element to fix white overscroll */
+  html {
+    @apply bg-cosmic-navy;
+  }
+  
   body {
     @apply bg-cosmic-navy text-white overflow-x-hidden antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
