@@ -18,6 +18,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
   const [confetti, setConfetti] = useState<Confetti[]>([])
   const [showContent, setShowContent] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [showTooltip, setShowTooltip] = useState(false)
 
   useEffect(() => {
     // Generate confetti
@@ -97,54 +98,67 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           You&apos;ve discovered the secret Easter egg hidden in our holiday card.
         </p>
         
-        {/* Secret message - Changed: Added copy button with green checkmark */}
+        {/* Secret message - Changed: Centered promo code with tooltip */}
         <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
-          <p className="text-green-700 font-semibold mb-2">🎁 Holiday Special:</p>
-          <div className="flex items-center justify-center gap-3">
+          <p className="text-green-700 font-semibold mb-4">🎁 Holiday Special:</p>
+          <div className="flex flex-col items-center justify-center gap-3">
             <code className="text-2xl font-mono text-yellow-600 tracking-wider">
               COSMIC2025
             </code>
-            <button
-              onClick={copyPromoCode}
-              className={`relative p-2 rounded-lg transition-all duration-300 ${
-                copied 
-                  ? 'bg-green-500 hover:bg-green-600' 
-                  : 'bg-gray-200 hover:bg-gray-300'
-              }`}
-              aria-label="Copy promo code"
-            >
-              {copied ? (
-                <svg 
-                  className="w-5 h-5 text-white animate-bounce-in" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M5 13l4 4L19 7" 
-                  />
-                </svg>
-              ) : (
-                <svg 
-                  className="w-5 h-5 text-gray-600" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" 
-                  />
-                </svg>
+            <div className="relative">
+              <button
+                onClick={copyPromoCode}
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+                className="p-2 rounded-lg transition-all duration-300 bg-gray-200 hover:bg-gray-300"
+                aria-label="Copy promo code"
+              >
+                {copied ? (
+                  <svg 
+                    className="w-5 h-5 text-green-600 animate-bounce-in" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M5 13l4 4L19 7" 
+                    />
+                  </svg>
+                ) : (
+                  <svg 
+                    className="w-5 h-5 text-gray-600" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" 
+                    />
+                  </svg>
+                )}
+              </button>
+              {/* Tooltip */}
+              {showTooltip && !copied && (
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-3 rounded whitespace-nowrap">
+                  Copy
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                </div>
               )}
-            </button>
+              {copied && (
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-3 rounded whitespace-nowrap">
+                  Copied!
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+                </div>
+              )}
+            </div>
           </div>
-          <p className="text-gray-600 text-sm mt-3 font-medium">
+          <p className="text-gray-600 text-sm mt-4 font-medium">
             Use this holiday code for $25 off
           </p>
           <p className="text-gray-500 text-xs mt-2">
