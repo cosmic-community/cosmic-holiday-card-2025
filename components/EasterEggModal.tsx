@@ -65,10 +65,10 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
     >
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
+      {/* Backdrop - Changed: Added fixed positioning to ensure full-screen coverage */}
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
       
-      {/* Confetti - Changed: Start from -20px above viewport */}
+      {/* Confetti */}
       {confetti.map((piece) => (
         <div
           key={piece.id}
@@ -85,7 +85,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         />
       ))}
       
-      {/* Modal content - Changed: White background for readability */}
+      {/* Modal content */}
       <div 
         className={`relative bg-white rounded-3xl p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 shadow-2xl ${
           showContent ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
@@ -113,7 +113,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           You&apos;ve discovered the secret Easter egg hidden in our holiday card.
         </p>
         
-        {/* Secret message - Changed: Promo code with copy button inside */}
+        {/* Secret message */}
         <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
           <p className="text-green-700 font-semibold mb-4">🎁 Holiday Special:</p>
           <div className="flex flex-col items-center justify-center gap-3">
@@ -183,7 +183,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           </p>
         </div>
 
-        {/* Changed: Added call-to-action button to apply code */}
+        {/* Call-to-action button */}
         <a
           href="https://app.cosmicjs.com/account/billing"
           target="_blank"
