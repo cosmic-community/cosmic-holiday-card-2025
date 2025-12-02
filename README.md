@@ -1,6 +1,6 @@
-# 🎄 Cosmic Holiday Card 2025
+# 🎄 Cosmic Holiday Card 2026
 
-A magical, interactive holiday greeting card from Cosmic to celebrate the 2025 season! Features beautiful snowfall animations, elegant typography, and a hidden easter egg for curious visitors.
+A magical, interactive holiday greeting card from Cosmic to celebrate the 2025-2026 holiday season! Features beautiful snowfall animations, elegant typography, and a hidden easter egg for curious visitors.
 
 ## ✨ Features
 
@@ -27,7 +27,7 @@ This application was built using the following prompts to generate the content s
 
 ### Code Generation Prompt
 
-> Create a Xmas card for Cosmic (2025) to send out to our customers and friends on social media. Include an easter egg.
+> Create a Xmas card for Cosmic (2026) to send out to our customers and friends on social media. Include an easter egg.
 
 The app has been tailored as a festive holiday experience showcasing Cosmic's brand with an interactive easter egg surprise.
 
@@ -80,20 +80,3 @@ bun dev
 4. Deploy!
 
 ### Environment Variables
-
-```
-COSMIC_BUCKET_SLUG=your-bucket-slug
-COSMIC_READ_KEY=your-read-key
-```
-
-## 📱 Social Sharing
-
-The card is optimized for social media sharing with:
-- Open Graph meta tags
-- Twitter Card support
-- Beautiful preview images
-
----
-
-Made with ❄️ by [Cosmic](https://www.cosmicjs.com)
-<!-- README_END -->

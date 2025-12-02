@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '✦ Happy Holidays from Cosmic | 2025',
-  description: 'Wishing you a peaceful holiday season and a wonderful 2025. From your friends at Cosmic.',
-  keywords: ['Cosmic', 'Holiday Card', 'Christmas', '2025', 'New Year', 'Happy Holidays', 'Season Greetings'],
+  // Changed: Updated title to reflect 2026
+  title: '✦ Happy Holidays from Cosmic | 2026',
+  // Changed: Updated description to reference 2026
+  description: 'Wishing you a peaceful holiday season and a wonderful 2026. From your friends at Cosmic.',
+  // Changed: Updated keywords to include 2026
+  keywords: ['Cosmic', 'Holiday Card', 'Christmas', '2026', 'New Year', 'Happy Holidays', 'Season Greetings'],
   authors: [{ name: 'Cosmic' }],
   creator: 'Cosmic',
   publisher: 'Cosmic',
   openGraph: {
-    title: '✦ Happy Holidays from Cosmic | 2025',
-    description: 'Wishing you a peaceful holiday season and a wonderful 2025. From your friends at Cosmic.',
+    // Changed: Updated OpenGraph title to 2026
+    title: '✦ Happy Holidays from Cosmic | 2026',
+    // Changed: Updated OpenGraph description to reference 2026
+    description: 'Wishing you a peaceful holiday season and a wonderful 2026. From your friends at Cosmic.',
     url: 'https://cosmic-holiday-card-2025.vercel.app',
     siteName: 'Cosmic Holiday Card',
     images: [
@@ -18,7 +23,8 @@ export const metadata: Metadata = {
         url: 'https://imgix.cosmicjs.com/74943590-cee8-11f0-ab33-09cb31e91e16-happy-holidays-2025.png?w=1200&h=630&fit=crop&auto=format,compress',
         width: 1200,
         height: 630,
-        alt: 'Happy Holidays 2025 from Cosmic - Festive holiday greeting card',
+        // Changed: Updated alt text to reference 2026
+        alt: 'Happy Holidays 2026 from Cosmic - Festive holiday greeting card',
       },
     ],
     locale: 'en_US',
@@ -26,8 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '✦ Happy Holidays from Cosmic | 2025',
-    description: 'Wishing you a peaceful holiday season and a wonderful 2025!',
+    // Changed: Updated Twitter card title to 2026
+    title: '✦ Happy Holidays from Cosmic | 2026',
+    // Changed: Updated Twitter card description to reference 2026
+    description: 'Wishing you a peaceful holiday season and a wonderful 2026!',
     images: ['https://imgix.cosmicjs.com/74943590-cee8-11f0-ab33-09cb31e91e16-happy-holidays-2025.png?w=1200&h=630&fit=crop&auto=format,compress'],
     creator: '@cosmicjs',
   },
