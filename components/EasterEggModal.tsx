@@ -98,22 +98,20 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           You&apos;ve discovered the secret Easter egg hidden in our holiday card.
         </p>
         
-        {/* Secret message - Changed: Centered promo code with tooltip */}
+        {/* Secret message - Changed: Clickable promo code with tooltip */}
         <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
           <p className="text-green-700 font-semibold mb-4">🎁 Holiday Special:</p>
           <div className="flex flex-col items-center justify-center gap-3">
-            <code className="text-2xl font-mono text-yellow-600 tracking-wider">
-              COSMIC2025
-            </code>
-            <div className="relative">
+            <div className="relative inline-block">
               <button
                 onClick={copyPromoCode}
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
-                className="p-2 rounded-lg transition-all duration-300 bg-gray-200 hover:bg-gray-300"
-                aria-label="Copy promo code"
+                className="relative text-2xl font-mono text-yellow-600 tracking-wider bg-transparent hover:bg-gray-100 px-4 py-2 rounded-lg transition-all duration-300 cursor-pointer flex items-center gap-2"
+                aria-label="Click to copy promo code"
               >
-                {copied ? (
+                <code>COSMIC2025</code>
+                {copied && (
                   <svg 
                     className="w-5 h-5 text-green-600 animate-bounce-in" 
                     fill="none" 
@@ -125,20 +123,6 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
                       strokeLinejoin="round" 
                       strokeWidth={2} 
                       d="M5 13l4 4L19 7" 
-                    />
-                  </svg>
-                ) : (
-                  <svg 
-                    className="w-5 h-5 text-gray-600" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" 
                     />
                   </svg>
                 )}
