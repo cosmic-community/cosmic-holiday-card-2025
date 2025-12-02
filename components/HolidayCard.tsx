@@ -51,7 +51,7 @@ export default function HolidayCard() {
           <p className="text-base text-cosmic-gray-light mb-8 leading-relaxed font-normal max-w-lg mx-auto">
             Thank you for being part of our journey.
             <br />
-            Here&apos;s to an extraordinary 2025 as we build together into 2026.
+            Here&apos;s to an extraordinary 2025. We looking forward to building with you in 2026.
           </p>
           
           {/* Signature */}
