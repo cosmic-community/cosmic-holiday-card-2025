@@ -109,7 +109,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
           ✕
         </button>
         
-        {/* Easter egg content */}
+        {/* Easter egg content - Changed: Capitalized "Cosmic" */}
         <div className="text-6xl mb-6 animate-bounce-in">🥚✨</div>
         
         <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
@@ -117,7 +117,7 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
         </h2>
         
         <p className="text-gray-700 mb-6 leading-relaxed">
-          Congratulations, cosmic explorer! 🚀
+          Congratulations, Cosmic explorer! 🚀
           <br /><br />
           You&apos;ve discovered the secret Easter egg hidden in our holiday card.
         </p>

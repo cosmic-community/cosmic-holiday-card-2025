@@ -47,11 +47,11 @@ export default function HolidayCard() {
             From all of us at <span className="text-white font-semibold">Cosmic</span>, we wish you a season filled with <span className="text-festive-joy font-semibold">joy</span>, <span className="text-festive-warmth font-semibold">warmth</span>, and <span className="text-festive-peace font-semibold">peace</span>.
           </p>
           
-          {/* Thank you message */}
+          {/* Thank you message - Changed: Simplified 2026 forward-looking message */}
           <p className="text-base text-cosmic-gray-light mb-8 leading-relaxed font-normal max-w-lg mx-auto">
             Thank you for being part of our journey.
             <br />
-            Here&apos;s to an extraordinary 2025.
+            Here&apos;s to an extraordinary 2025. We looking forward to building with you in 2026.
           </p>
           
           {/* Signature */}
