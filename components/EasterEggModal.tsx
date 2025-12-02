@@ -41,12 +41,13 @@ export default function EasterEggModal({ onClose }: EasterEggModalProps) {
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
       
-      {/* Confetti */}
+      {/* Confetti - Changed: Start from -20px above viewport */}
       {confetti.map((piece) => (
         <div
           key={piece.id}
-          className="absolute top-0 animate-confetti"
+          className="absolute animate-confetti"
           style={{
+            top: '-20px',
             left: `${piece.left}%`,
             width: `${piece.size}px`,
             height: `${piece.size}px`,
